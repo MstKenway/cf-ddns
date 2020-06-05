@@ -1,11 +1,14 @@
 #!/bin/bash
 
 # CHANGE THESE
-auth_email="user@example.com"
-auth_key="c2547eb745079dac9320b638f5e225cf483cc5cfdda41" # found in cloudflare account settings
-zone_name="example.com"
-record_name="www.example.com"
-
+# auth_email="user@example.com"
+# auth_key="c2547eb745079dac9320b638f5e225cf483cc5cfdda41" # found in cloudflare account settings
+# zone_name="example.com"
+# record_name="www.example.com"
+auth_email="814639168@qq.com"
+auth_key="054c1dc2a379ded2b3271150c1c9aee21a3d2" # found in cloudflare account settings
+zone_name="anuse.name"
+record_name="hkb.anuse.name"
 
 # MAYBE CHANGE THESE
 ip=$(curl -s http://ip.sb)
@@ -36,7 +39,7 @@ if [ -f $id_file ] && [ $(wc -l $id_file | cut -d " " -f 1) == 2 ]; then
     record_identifier=$(tail -1 $id_file)
 else
     zone_identifier=$(curl -s -X GET "https://api.cloudflare.com/client/v4/zones?name=$zone_name" -H "X-Auth-Email: $auth_email" -H "X-Auth-Key: $auth_key" -H "Content-Type: application/json" | grep -Po '(?<="id":")[^"]*' | head -1)
-    record_identifier=$(curl -s -X GET "https://api.cloudflare.com/client/v4/zones/$zone_identifier/dns_records?name=$record_name" -H "X-Auth-Email: $auth_email" -H "X-Auth-Key: $auth_key" -H "Content-Type: application/json" | grep -E '"id": "[0-9a-zA-Z]*"'|grep -Eo '[0-9a-zA-Z]{3,}')
+    record_identifier=$(curl -s -X GET "https://api.cloudflare.com/client/v4/zones/$zone_identifier/dns_records?name=$record_name" -H "X-Auth-Email: $auth_email" -H "X-Auth-Key: $auth_key" -H "Content-Type: application/json" | grep -Eo '"id":[^,]*'|grep -Eo '[0-9a-zA-Z]{3,}')
     echo "$zone_identifier" >$id_file
     echo "$record_identifier" >>$id_file
 fi
