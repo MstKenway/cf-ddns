@@ -1,14 +1,11 @@
 #!/bin/bash
 
 # CHANGE THESE
-# auth_email="user@example.com"
-# auth_key="c2547eb745079dac9320b638f5e225cf483cc5cfdda41" # found in cloudflare account settings
-# zone_name="example.com"
-# record_name="www.example.com"
-auth_email="814639168@qq.com"
-auth_key="054c1dc2a379ded2b3271150c1c9aee21a3d2" # found in cloudflare account settings
-zone_name="anuse.name"
-record_name="hkb.anuse.name"
+auth_email="user@example.com"
+auth_key="c2547eb745079dac9320b638f5e225cf483cc5cfdda41" # found in cloudflare account settings
+zone_name="example.com"
+record_name="www.example.com"
+
 
 # MAYBE CHANGE THESE
 ip=$(curl -s http://ip.sb)
