@@ -8,7 +8,7 @@ record_name="www.example.com"
 
 
 # MAYBE CHANGE THESE
-ip=$(curl -s http://ip.sb)
+ip=$(curl -s http://ifconfig.me)
 ip_file="ip.txt"
 id_file="cloudflare.ids"
 log_file="cloudflare.log"
