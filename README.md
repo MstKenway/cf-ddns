@@ -18,6 +18,7 @@ A shell script for cloudflare ddns
 ```
 mkdir /etc/cf-ddns
 wget https://github.com/MstKenway/cf-ddns/raw/master/cf-ddns.sh -O /etc/cf-ddns/cf-ddns.sh && chmod +x /etc/cf-ddns/cf-ddns.sh
+
 ```
 
 2.修改参数，包括cf的账号、api令牌、域名和CNAME。如下：
