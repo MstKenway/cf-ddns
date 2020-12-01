@@ -5,7 +5,7 @@ A shell script for cloudflare ddns
 代码修改自[出处](https://gist.githubusercontent.com/benkulbertis/fff10759c2391b6618dd/raw )
 
 
-2020年7月21日更新：最近ip.sb好像不太正常，更换为ifconfig.me
+~~2020年7月21日更新：最近ip.sb好像不太正常，更换为ifconfig.me~~
 
 2020年6月5日更新：好像CF又更改了返回数据的格式，导致新机器无法成功使用，目前已更改了匹配规则应该能应付更多情况……（希望吧）
 
