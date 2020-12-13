@@ -21,7 +21,7 @@ log() {
 }
 
 # SCRIPT START
-log "Check Initiated"
+#log "Check Initiated"
 
 if [ -f $ip_file ]; then
     old_ip=$(cat $ip_file)
